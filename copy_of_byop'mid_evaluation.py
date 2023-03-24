@@ -8187,14 +8187,14 @@ print(new_list)
 
 words = new_list
 word_counts = Counter(words)
-top_words = word_counts.most_common(30)
+top_words = word_counts.most_common(20)
 
 # Plotting 30 most frequent words from the filtered_reviews set
 plt.bar( [w[0] for w in top_words],[w[1] for w in top_words])
 plt.xticks(rotation=45, ha='right')
 plt.xlabel('Word')
 plt.ylabel('Count')
-plt.title('30 Most frequently occurinng words')
+plt.title('20 Most frequently occurinng words')
 plt.show()
 
 #Tokenize the sentence into words
