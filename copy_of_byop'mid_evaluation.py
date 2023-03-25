@@ -8230,15 +8230,6 @@ print(transcripts_topics)
 for i, topic in enumerate(transcripts_topics.print_topics(5)):
     print ('%d: %s\n'%(i+1, topic))
 
-
-## Created chunks after lemmatising thus giving words which now have more meaning than their previous form"""
-
-import spacy
-spacy.load('en_core_web_sm')
-doc = nlp(review_string)
-for chunk in doc:
-  print(chunk)
-
 # Build the bigram and trigram models
 bigram = gensim.models.Phrases(new_list, min_count=5, threshold=100) # higher threshold fewer phrases.
 trigram = gensim.models.Phrases(bigram[new_list], threshold=100)  
