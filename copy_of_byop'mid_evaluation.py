@@ -3137,25 +3137,33 @@ for token in reviews:
 for token in reviews:
   print(token.lemma_)
 
-"""Printing number of tokens"""
+#Printing number of tokens"""
 
 len(reviews)
 
-"""### Creating Entity from the Token set created above"""
+### Creating Entity from the Token set created above"""
 
 for entity in reviews.ents:
     print(entity)
 
-"""# Removal of stopwords from tokenised reviews
+## Created chunks after lemmatising thus giving words which now have more meaning than their previous form"""
 
-Importing NLTK & downloading necessary resources
-"""
+import spacy
+spacy.load('en_core_web_sm')
+doc = nlp(review_string)
+for chunk in doc:
+  print(chunk)
+
+# Removal of stopwords from tokenised reviews
+
+#Importing NLTK & downloading necessary resources
+
 
 import nltk
 nltk.download('stopwords')
 nltk.download('punkt')
 
-"""**Removing stopwords from the tokenised review set & then printing 20 most frequent words**"""
+#**Removing stopwords from the tokenised review set & then printing 20 most frequent words**"""
 
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
@@ -8222,18 +8230,8 @@ print(transcripts_topics)
 for i, topic in enumerate(transcripts_topics.print_topics(5)):
     print ('%d: %s\n'%(i+1, topic))
 
-# Build the bigram and trigram models
-bigram = gensim.models.Phrases(new_list, min_count=5, threshold=100) # higher threshold fewer phrases.
-trigram = gensim.models.Phrases(bigram[new_list], threshold=100)  
 
-# Faster way to get a sentence clubbed as a trigram/bigram
-bigram_mod = gensim.models.phrases.Phraser(bigram)
-trigram_mod = gensim.models.phrases.Phraser(trigram)
-
-# See trigram example
-print(bigram_mod[new_list])
-
-"""## Created chunks after lemmatising thus giving words which now have more meaning than their previous form"""
+## Created chunks after lemmatising thus giving words which now have more meaning than their previous form"""
 
 import spacy
 spacy.load('en_core_web_sm')
@@ -8241,3 +8239,9 @@ doc = nlp(review_string)
 for chunk in doc:
   print(chunk)
 
+# Build the bigram and trigram models
+bigram = gensim.models.Phrases(new_list, min_count=5, threshold=100) # higher threshold fewer phrases.
+trigram = gensim.models.Phrases(bigram[new_list], threshold=100)  
+
+# See trigram example
+print(bigram_mod[new_list])
