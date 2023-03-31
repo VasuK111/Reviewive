@@ -14,4 +14,4 @@ The given image shows the output of an LDA model which shows the AVERAGE TOPIC C
 ![image](https://user-images.githubusercontent.com/117103753/229208053-6ccce290-2f5c-4803-b897-b84f470f2ae4.png)
 The image below shows the visualisation of the topics created using the python pyLDAvis library . Just move the cursor on the topics shown in circle to see the frequency of the different terms.
 ![image](https://user-images.githubusercontent.com/117103753/229209181-debdedfa-021e-4b3d-8591-b9c14c2fc3b3.png)
-Happy Topic Modelling :). I hope now analysing the reviews become much easier for you compatred to what it was before.
+Happy Topic Modelling :). I hope now analysing the reviews become much easier for you compared to what it was before.
