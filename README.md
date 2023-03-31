@@ -1,6 +1,6 @@
 # Vasu-Khanna-BYOP-23
 Raw code written and executed at Google Colab :
-FOR END-EVALUATION : https://colab.research.google.com/drive/1MVInaCIV1e6-wl8eQYNFZxDdpwdni7Tz#scrollTo=4I1UOMg9Lpo7
+FOR END-EVALUATION : https://colab.research.google.com/drive/1MVInaCIV1e6-wl8eQYNFZxDdpwdni7Tz#scrollTo=4I1UOMg9Lpo7                             
 SECONDARY GOALS : https://colab.research.google.com/drive/1rZsGGzT0ODys4J72z4R8XwwISMivBYq_#scrollTo=8Uwn4Lte_eEM        
 I have finished the code for LDA model, trained the model, tuned the model, calculated the Coherence Score
 ( it came out to be 0.37524 compared to the optimal value of 0.454) and also I finished the part of secondary goal which was the sentiment analysis of the reviews. 
