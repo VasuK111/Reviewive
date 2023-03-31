@@ -13,3 +13,5 @@ How to interpret the LDA model ?
 The given image shows the output of an LDA model which shows the AVERAGE TOPIC COHERENCE along with the tokens(words) with their proportions in the document we created in LDA.
 ![image](https://user-images.githubusercontent.com/117103753/229208053-6ccce290-2f5c-4803-b897-b84f470f2ae4.png)
 The image below shows the visualisation of the topics created using the python pyLDAvis library . Just move the cursor on the topics shown in circle to see the frequency of the different terms.
+![image](https://user-images.githubusercontent.com/117103753/229208971-b70221e4-03c6-47e7-bb98-18d1118431eb.png)
+Happy Topic Modelling :)
