@@ -16,33 +16,31 @@ import seaborn as sns
 
 """Dataset Loading(I used the same dataset for secondary goals also for more deep analysis of the data)"""
 
-from google.colab import drive
-drive.mount('/content/gdrive')
-
-df = pd.read_csv('/content/gdrive/MyDrive/BYOP/Restaurant_reviews_dataset.csv')
+df = pd.read_csv("Restaurant_reviews_dataset.csv")
 
 """Printing the dataset"""
 
-df
+print(df)
 
 """Dataset Visualisation"""
 
-df.info()
+print(df.info())
 
-df.describe()
+print(df.describe())
 
 df['Liked'].nunique()
 
 print(df['Liked'].unique())
 
-df['Liked'].value_counts()
+print(df['Liked'].value_counts())
 
-df.head()
+print(df.head())
 
-df.tail()
+print(df.tail())
 
 plt.figure(figsize=(9,5))
 sns.countplot(x=df.Liked);
+plt.show()
 
 # Generating a correlation matrix of numerical columns
 corr_matrix = df.corr()
@@ -62,13 +60,13 @@ x_train,x_test,y_train,y_test=train_test_split(x,y,random_state=0)
 
 """Viewing the shapes of Training & Testing sets"""
 
-x_train.shape
+print(x_train.shape)
 
-x_test.shape
+print(x_test.shape)
 
-y_train.shape
+print(y_train.shape)
 
-y_test.shape
+print(y_test.shape)
 
 """Importing CountVectorizer"""
 
@@ -93,7 +91,7 @@ y_pred=model.predict(x_test_vect)
 """Evaluating the model"""
 
 from sklearn.metrics import accuracy_score
-accuracy_score(y_pred,y_test)*100
+print(accuracy_score(y_pred,y_test)*100)
 
 """Creating Pipelines for the same task"""
 
@@ -108,7 +106,7 @@ text_model.fit(x_train,y_train)
 
 y_pred=text_model.predict(x_test)
 
-y_pred
+print(y_pred)
 
 """Evaluating the Model
 
@@ -120,7 +118,7 @@ y_pred
 """
 
 from sklearn.metrics import accuracy_score
-accuracy_score(y_pred,y_test)*100
+print(accuracy_score(y_pred,y_test)*100)
 
 """Saving the Model"""
 
@@ -129,13 +127,13 @@ joblib.dump(text_model,'BYOP-SECONDARY-GOAL')
 
 """# Prediction of New Reviews using our awesome model!"""
 
-text_model.predict(["Super delicious food"])
+print(text_model.predict(["Super delicious food"]))
 
-text_model.predict(["why so salty food"])
+print(text_model.predict(["why so salty food"]))
 
 """The next review should have returned 1 but returns 0 indicating the model is not 100% accurate, but still it returns correct integer value for 8 out of 10 reviews i.e 80% accuracy."""
 
-text_model.predict(["Sauce was fresh"])
+print(text_model.predict(["Sauce was fresh"]))
 
-text_model.predict(["Nice bouffet!"])
+print(text_model.predict(["Nice bouffet!"]))
 
